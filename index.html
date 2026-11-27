@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Портфолио — дизайн упаковки, баннеров и сайтов</title>
+<meta name="description" content="Портфолио: упаковка, баннеры для соцсетей и маркетплейсов, сайты.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lora:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F2EC;--ink:#18160F;--mute:#6B665C;--line:#E2DCD0}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Montserrat,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit} img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 max(5vw,18px)}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:20px;height:62px}
+nav b{font-weight:800;letter-spacing:.02em} nav .ln{margin-left:auto;display:flex;gap:22px;font-weight:500;font-size:15px}
+nav .ln a{text-decoration:none} nav .ln a:hover{text-decoration:underline}
+.hero{padding:clamp(40px,7vw,96px) 0 clamp(40px,6vw,80px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:center}
+h1{font:800 clamp(40px,6vw,76px)/1.02 Montserrat;margin:0 0 18px;letter-spacing:-.02em}
+.role{font:italic 500 clamp(20px,2.4vw,28px)/1.3 Lora;margin:0 0 20px;color:var(--mute)}
+.intro{max-width:34em;font-size:17px;margin:0 0 28px}
+.contacts{display:flex;flex-wrap:wrap;gap:10px}
+.contacts a{text-decoration:none;border:1.5px solid var(--ink);border-radius:999px;padding:10px 18px;font-weight:600;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+.contacts a.pri{background:var(--ink);color:var(--bg)}
+.fan{position:relative;height:clamp(320px,38vw,480px)}
+.fan img{position:absolute;border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.22);width:auto}
+.fan img:nth-child(1){height:88%;left:4%;top:8%;transform:rotate(-7deg)}
+.fan img:nth-child(2){height:62%;left:30%;top:22%;z-index:2;transform:rotate(2deg)}
+.fan img:nth-child(3){height:88%;right:2%;top:2%;transform:rotate(6deg)}
+.what{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.what ul{list-style:none;margin:0;padding:22px 0;display:flex;flex-wrap:wrap;gap:10px 34px;font-weight:600}
+.what li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ink);margin-right:10px;vertical-align:middle}
+.case{background:var(--c1);color:var(--cink);padding:clamp(48px,7vw,96px) 0}
+.ch{display:flex;gap:22px;align-items:flex-end;margin-bottom:18px}
+.num{font:800 clamp(48px,7vw,88px)/.9 Montserrat;color:var(--c2)}
+h2{font:800 clamp(32px,4.4vw,52px)/1.05 Montserrat;margin:0;letter-spacing:-.01em}
+.kind{margin:4px 0 0;font:italic 500 19px Lora;opacity:.85}
+.lead{max-width:40em;font-size:17px;margin:0 0 18px}
+.tags{list-style:none;padding:0;margin:0 0 34px;display:flex;flex-wrap:wrap;gap:8px}
+.tags li{border:1.5px solid var(--c2);color:var(--cink);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
+.duo{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:20px;margin-bottom:44px}
+.card{position:relative;display:block;border-radius:18px;overflow:hidden;background:#fff;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.14);transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.card img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/2}
+.card.pack img{object-fit:contain;background:#fff;padding:10px}
+.cap{position:absolute;left:14px;bottom:14px;background:var(--c2);color:#fff;font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px}
+#alma-crunch .cap{color:#fff} #dala .cap,#nomad-cacao .cap{color:#1a1a1a}
+h3{font:700 20px Montserrat;margin:0 0 16px}
+.gal{display:flex;flex-wrap:wrap;gap:22px 18px;align-items:flex-end}
+.gal .b{margin:0;flex:0 0 auto} .gal .b.wide{flex-basis:100%}
+.zoom{cursor:zoom-in;display:block;text-decoration:none;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.16)}
+.zoom:focus-visible{outline:3px solid var(--c2,#18160F);outline-offset:3px}
+.b:not(.wide) .zoom img{height:320px;width:auto} .b.wide .zoom{width:100%} .b.wide .zoom img{width:100%;height:auto}
+figcaption{font-size:13px;margin-top:8px;opacity:.8}
+.extra{padding:clamp(48px,7vw,96px) 0}
+.extra h2{margin-bottom:8px} .extra .sub{color:var(--mute);margin:0 0 36px;max-width:40em}
+.ex{margin-bottom:48px} .exh{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.exh h3{margin:0;font-size:24px} .kind2{color:var(--mute);font:italic 500 17px Lora}
+.dot{width:14px;height:14px;border-radius:50%;display:inline-block;align-self:center}
+.extra .zoom{--c2:#18160F}
+footer{background:var(--ink);color:var(--bg);padding:clamp(48px,7vw,88px) 0}
+footer h2{color:var(--bg);margin-bottom:12px} footer p{color:#bdb6a8;max-width:34em}
+footer .contacts a{border-color:var(--bg);color:var(--bg)} footer .contacts a.pri{background:var(--bg);color:var(--ink)}
+.copy{margin-top:44px;font-size:13px;color:#8d877b}
+dialog{border:0;padding:0;background:transparent;max-width:94vw;max-height:94vh}
+dialog::backdrop{background:rgba(15,13,10,.86)}
+dialog img{max-width:94vw;max-height:88vh;width:auto;border-radius:10px}
+dialog button{position:fixed;top:14px;right:18px;font:700 28px Montserrat;background:none;border:0;color:#fff;cursor:pointer;width:48px;height:48px}
+.camps{display:grid;gap:28px}
+.camp{background:var(--c1);color:var(--cink);border-radius:26px;padding:clamp(24px,3.5vw,44px);display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:clamp(24px,3.5vw,48px);align-items:start}
+.camp .num{font-size:clamp(44px,5vw,64px)}
+.camp h3{font:800 clamp(30px,3.4vw,42px)/1.05 Montserrat;margin:10px 0 2px}
+.camp .kind{margin:0 0 14px}
+.ctext{margin:0 0 16px;font-size:15px;opacity:.9}
+.packpill{display:inline-block;margin:0 0 16px;font-weight:700;font-size:14px;background:var(--c2);color:var(--capfg,#fff);padding:6px 14px;border-radius:999px}
+.fmts{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:14px;font-weight:600}
+.fmts li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--c2);margin-right:9px;vertical-align:middle}
+.cgal .gal{gap:18px 16px}
+.cgal figcaption{display:none}
+.cgal .b:not(.wide) .zoom img{height:300px}
+.zoom{box-sizing:border-box} .b.wide .zoom{width:100%}
+@media(max-width:900px){.camp{grid-template-columns:1fr}}
+@media(max-width:760px){.cgal .b:not(.wide) .zoom img{height:auto;width:100%}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
+@media(max-width:760px){
+ .hero .wrap,.duo{grid-template-columns:1fr} .fan{height:300px} nav .ln{display:none}
+ .gal .b{flex-basis:100%} .b:not(.wide) .zoom img{height:auto;width:100%} .b:not(.wide) .zoom{max-width:420px}
+}
+
+/* justified rows: one line, equal heights */
+.gal{display:block}
+.gal .row{display:flex;gap:16px;align-items:flex-start;margin-bottom:18px}
+.gal .row .b{min-width:0;margin:0}
+.gal .b .zoom img,.cgal .b:not(.wide) .zoom img,.b:not(.wide) .zoom img{width:100%;height:auto}
+.gal .b.wide{margin-top:0}
+/* other works: dark band */
+.extra{background:#1C1915;color:#F5F2EC}
+.extra h2{color:#F5F2EC}
+.extra .sub{color:#B7AF9F}
+.camp{box-shadow:0 18px 50px rgba(0,0,0,.35);transition:transform .3s}
+.camp:hover{transform:translateY(-4px)}
+footer{background:var(--bg);color:var(--ink);border-top:1px solid var(--line)}
+footer h2{color:var(--ink)} footer p{color:var(--mute)}
+footer .contacts a{border-color:var(--ink);color:var(--ink)} footer .contacts a.pri{background:var(--ink);color:var(--bg)}
+.copy{color:var(--mute)}
+@media (prefers-reduced-motion:reduce){.camp{transition:none}.camp:hover{transform:none}}
+@media(max-width:760px){.gal .row{flex-direction:column;max-width:420px!important}.gal .row .b{flex:none!important;width:100%}}
+
+/* ---- header ---- */
+.hero{position:relative;overflow:hidden;background:radial-gradient(1200px 500px at 85% 10%,#FFFFFF 0%,transparent 60%),var(--bg)}
+.hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:40px}
+h1{font-size:clamp(40px,5.4vw,72px)}
+.brands{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;font-weight:600;color:var(--mute)}
+.brands li{display:flex;align-items:center;gap:8px}
+.brands i{width:12px;height:12px;border-radius:50%;display:inline-block;box-shadow:0 0 0 2px #fff}
+.collage{position:relative;height:clamp(360px,42vw,540px)}
+.collage img{position:absolute;border-radius:16px;box-shadow:0 22px 50px rgba(0,0,0,.25);width:auto;transition:transform .4s}
+.collage .c1{height:78%;left:0;top:10%;transform:rotate(-8deg);z-index:2}
+.collage .c2{height:52%;left:22%;top:0;transform:rotate(-2deg);z-index:1}
+.collage .c3{height:52%;left:34%;top:34%;transform:rotate(3deg);z-index:4}
+.collage .c4{height:80%;right:2%;top:4%;transform:rotate(7deg);z-index:3}
+.collage .c5{height:30%;left:8%;bottom:0;transform:rotate(-3deg);z-index:5}
+.collage:hover .c1{transform:rotate(-11deg) translateX(-10px)} .collage:hover .c4{transform:rotate(10deg) translateX(10px)}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.9}
+.blob.b1{width:58%;aspect-ratio:1;left:14%;top:8%;background:#E9DFC9}
+.blob.b2{width:26%;aspect-ratio:1;right:0;bottom:4%;background:#F7C9A8}
+.blob.b3{width:18%;aspect-ratio:1;left:0;top:0;background:#CFE7E0}
+.navbtn{margin-left:18px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:700;font-size:14px;padding:9px 18px;border-radius:999px;min-height:40px;display:inline-flex;align-items:center}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:28px 0}
+.stats>div{padding:0 22px;border-left:1px solid var(--line)} .stats>div:first-child{padding-left:0;border-left:0}
+.stats b{display:block;font:800 clamp(40px,5vw,64px)/1 Montserrat;letter-spacing:-.02em}
+.stats span{display:block;margin-top:6px;font-size:14px;color:var(--mute);max-width:16em}
+@media (prefers-reduced-motion:reduce){.collage img{transition:none}}
+@media(max-width:900px){.stats{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:22px}.stats>div:nth-child(3){padding-left:0;border-left:0}}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.collage{height:340px}.navbtn{margin-left:auto}}
+
+/* ---- top navigation: floating pill ---- */
+nav{position:sticky;top:12px;z-index:20;background:none;backdrop-filter:none;border:0;padding:0 max(3vw,10px);pointer-events:none}
+nav .wrap.navpill{pointer-events:auto;max-width:1200px;height:60px;padding:0 8px 0 10px;gap:14px;border-radius:999px;
+ background:color-mix(in srgb,#FFFDF8 82%,transparent);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);
+ border:1px solid rgba(24,22,15,.08);box-shadow:0 8px 30px rgba(24,22,15,.12)}
+.brandmark{display:flex;align-items:center;gap:10px;text-decoration:none}
+.mono{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:800 14px Montserrat;letter-spacing:.04em}
+nav .ln{gap:4px;margin-left:auto}
+nav .ln a{padding:9px 16px;border-radius:999px;transition:background .2s,color .2s}
+nav .ln a:hover{text-decoration:none;background:rgba(24,22,15,.07)}
+nav .ln a.on{background:var(--ink);color:var(--bg)}
+.navbtn{margin-left:6px;background:#E3A83B;color:var(--ink);min-height:44px;padding:0 20px}
+.navbtn:hover{filter:brightness(1.05)}
+.hero{margin-top:-72px;padding-top:calc(clamp(40px,7vw,96px) + 72px)}
+@media (prefers-reduced-motion:reduce){nav .ln a{transition:none}}
+@media(max-width:760px){nav .wrap.navpill{height:56px}.brandmark b{font-size:14px}.navbtn{margin-left:auto;padding:0 16px}}
+@media(max-width:400px){.brandmark b{display:none}}
+</style></head><body>
+<nav><div class="wrap navpill"><a class="brandmark" href="#"><span class="mono">УА</span><b>Увалиханов Асанали</b></a><div class="ln"><a href="#cases">Кейсы</a><a href="#extra">Другие работы</a><a href="#contacts">Контакты</a></div><a class="navbtn" href="https://t.me/shecks228">Написать</a></div></nav>
+
+<header class="hero"><div class="wrap">
+ <div>
+  <!-- ЗАМЕНИТЕ: имя, описание и контакты -->
+  <h1>Увалиханов Асанали</h1>
+  <p class="role">Дизайнер цифрового контента</p>
+  <p class="intro">Упаковка, баннеры для соцсетей и маркетплейсов, сайты. Веду бренд целиком: от названия и упаковки до рекламы и лендинга.</p>
+  <div class="contacts"><a class="pri" href="https://t.me/shecks228">Telegram</a><a href="mailto:shecks228@gmail.com">shecks228@gmail.com</a></div>
+ </div>
+ <div class="collage" aria-hidden="true">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  <img class="c1" src="assets/works/04_qara_stories-ru.webp" alt="">
+  <img class="c2" src="assets/works/05_bulaq_card-ru.webp" alt="">
+  <img class="c3" src="assets/works/01_dala_post-ru.webp" alt="">
+  <img class="c4" src="assets/works/06_qurt_stories-en.webp" alt="">
+  <img class="c5" src="assets/works/03_nomad_web-ru.webp" alt="">
+ </div>
+</div></header>
+
+<div class="what"><div class="wrap stats">
+ <div><b>6</b><span>брендов с нуля</span></div>
+ <div><b>3</b><span>развертки упаковки</span></div>
+ <div><b>15</b><span>баннеров для соцсетей, сайтов и маркетплейсов</span></div>
+ <div><b>3</b><span>сайта с 3D-анимацией упаковки</span></div>
+</div></div>
+
+<div id="cases"><section class="case" id="dala" style="--c1:#0E4A47;--c2:#E3A83B;--cink:#F6EBD3">
+<div class="wrap">
+ <header class="ch"><span class="num">01</span><div><h2>DALA</h2><p class="kind">Травяной чай</p></div></header>
+ <p class="lead">Чай со степными травами: чабрец, шиповник, мята. Бренд строится на казахском орнаменте «қошқар мүйіз» и пейзаже степи на закате.</p>
+ <ul class="tags"><li>Нейминг и айдентика</li><li>Упаковка 75×120×60 мм</li><li>Баннеры</li><li>Лендинг с 3D-разверткой</li></ul>
+ <div class="duo">
+  <a class="card pack" href="assets/packaging/dala-razvertka.pdf" target="_blank" rel="noopener">
+   <img src="assets/packaging/dala.webp" alt="Развертка упаковки DALA">
+   <span class="cap">Развертка упаковки · PDF ↗</span></a>
+  <a class="card site" href="dala/" target="_blank" rel="noopener">
+   <img src="assets/sites/dala.webp" alt="Сайт DALA">
+   <span class="cap">Открыть сайт ↗</span></a>
+ </div>
+ <h3>Баннеры</h3>
+ <div class="gal"><div class="row" style="max-width:576px"><figure class="b" style="flex:1.0000 1 0"><a class="zoom" href="assets/works/01_dala_post-ru.webp" aria-label="Открыть: Пост Instagram · RU"><img src="assets/works/01_dala_post-ru.webp" width="1400" height="1400" alt="Пост Instagram · RU"></a><figcaption>Пост Instagram · RU</figcaption></figure><figure class="b" style="flex:0.7500 1 0"><a class="zoom" href="assets/works/01_dala_card-ru.webp" aria-label="Открыть: Карточка маркетплейса · RU"><img src="assets/works/01_dala_card-ru.webp" width="900" height="1200" alt="Карточка маркетплейса · RU"></a><figcaption>Карточка маркетплейса · RU</figcaption></figure></div></div>
+</div></section><section class="case" id="alma-crunch" style="--c1:#FFF3E2;--c2:#D63B2F;--cink:#3A2A1E">
+<div class="wrap">
+ <header class="ch"><span class="num">02</span><div><h2>alma crunch</h2><p class="kind">Гранола-батончики</p></div></header>
+ <p class="lead">Батончики с апортом, овсом и мёдом. Образ — Алматы как город яблок и гор: тёплый кремовый фон, красное яблоко, Заилийский Алатау.</p>
+ <ul class="tags"><li>Нейминг и айдентика</li><li>Упаковка 150×90×40 мм</li><li>Баннеры</li><li>Лендинг с 3D-разверткой</li></ul>
+ <div class="duo">
+  <a class="card pack" href="assets/packaging/alma-crunch-razvertka.pdf" target="_blank" rel="noopener">
+   <img src="assets/packaging/alma-crunch.webp" alt="Развертка упаковки alma crunch">
+   <span class="cap">Развертка упаковки · PDF ↗</span></a>
+  <a class="card site" href="alma-crunch/" target="_blank" rel="noopener">
+   <img src="assets/sites/alma-crunch.webp" alt="Сайт alma crunch">
+   <span class="cap">Открыть сайт ↗</span></a>
+ </div>
+ <h3>Баннеры</h3>
+ <div class="gal"><div class="row" style="max-width:807px"><figure class="b" style="flex:0.5621 1 0"><a class="zoom" href="assets/works/02_alma-crunch_stories-ru.webp" aria-label="Открыть: Сторис · RU"><img src="assets/works/02_alma-crunch_stories-ru.webp" width="787" height="1400" alt="Сторис · RU"></a><figcaption>Сторис · RU</figcaption></figure><figure class="b" style="flex:1.9100 1 0"><a class="zoom" href="assets/works/02_alma-crunch_web-en.webp" aria-label="Открыть: Веб-баннер · EN"><img src="assets/works/02_alma-crunch_web-en.webp" width="1400" height="733" alt="Веб-баннер · EN"></a><figcaption>Веб-баннер · EN</figcaption></figure></div></div>
+</div></section><section class="case" id="nomad-cacao" style="--c1:#2A1913;--c2:#D9A95B;--cink:#F3E6D2">
+<div class="wrap">
+ <header class="ch"><span class="num">03</span><div><h2>NOMAD CACAO</h2><p class="kind">Шоколад на верблюжьем молоке</p></div></header>
+ <p class="lead">Премиальный молочный шоколад на верблюжьем молоке. Тёмная упаковка, золото и силуэт верблюда на фоне закатного солнца.</p>
+ <ul class="tags"><li>Нейминг и айдентика</li><li>Упаковка 160×80×18 мм</li><li>Баннеры</li><li>Лендинг с 3D-разверткой</li></ul>
+ <div class="duo">
+  <a class="card pack" href="assets/packaging/nomad-cacao-razvertka.pdf" target="_blank" rel="noopener">
+   <img src="assets/packaging/nomad-cacao.webp" alt="Развертка упаковки NOMAD CACAO">
+   <span class="cap">Развертка упаковки · PDF ↗</span></a>
+  <a class="card site" href="nomad-cacao/" target="_blank" rel="noopener">
+   <img src="assets/sites/nomad-cacao.webp" alt="Сайт NOMAD CACAO">
+   <span class="cap">Открыть сайт ↗</span></a>
+ </div>
+ <h3>Баннеры</h3>
+ <div class="gal"><div class="row" style="max-width:1011px"><figure class="b" style="flex:1.2000 1 0"><a class="zoom" href="assets/works/03_nomad_square-ru.webp" aria-label="Открыть: Баннер 300×250 · RU"><img src="assets/works/03_nomad_square-ru.webp" width="1200" height="1000" alt="Баннер 300×250 · RU"></a><figcaption>Баннер 300×250 · RU</figcaption></figure><figure class="b" style="flex:1.9100 1 0"><a class="zoom" href="assets/works/03_nomad_web-ru.webp" aria-label="Открыть: Веб-баннер · RU"><img src="assets/works/03_nomad_web-ru.webp" width="1400" height="733" alt="Веб-баннер · RU"></a><figcaption>Веб-баннер · RU</figcaption></figure></div></div>
+</div></section></div>
+
+<section class="extra" id="extra"><div class="wrap">
+ <h2>Другие работы</h2>
+ <p class="sub">Концепты рекламных кампаний для трёх брендов: баннеры для соцсетей, сайтов и маркетплейсов. Упаковка другой формы — банка, стеклянная бутылка и пакет чипсов.</p>
+ <div class="camps"><article class="camp" style="--capfg:#F2E8DA;--c1:#C9773F;--c2:#16110E;--cink:#16110E">
+  <div class="cinfo">
+   <span class="num">04</span>
+   <h3>QARA</h3>
+   <p class="kind">Колд брю в банке</p>
+   <p class="ctext">Кофе холодного заваривания. Медная банка с чёрной этикеткой, зёрна и вид сверху на чашку.</p>
+   <p class="packpill">Банка 250 мл</p>
+   <ul class="fmts"><li>Пост Instagram · EN</li><li>Сторис · RU</li><li>Баннер 728×90 · RU</li></ul>
+  </div>
+  <div class="cgal"><div class="gal"><div class="row" style="max-width:516px"><figure class="b" style="flex:1.0000 1 0"><a class="zoom" href="assets/works/04_qara_post-en.webp" aria-label="Открыть: Пост Instagram · EN"><img src="assets/works/04_qara_post-en.webp" width="1400" height="1400" alt="Пост Instagram · EN"></a><figcaption>Пост Instagram · EN</figcaption></figure><figure class="b" style="flex:0.5621 1 0"><a class="zoom" href="assets/works/04_qara_stories-ru.webp" aria-label="Открыть: Сторис · RU"><img src="assets/works/04_qara_stories-ru.webp" width="787" height="1400" alt="Сторис · RU"></a><figcaption>Сторис · RU</figcaption></figure></div><figure class="b wide"><a class="zoom" href="assets/works/04_qara_strip-ru.webp" aria-label="Открыть: Баннер 728×90 · RU"><img src="assets/works/04_qara_strip-ru.webp" width="1400" height="173" alt="Баннер 728×90 · RU"></a><figcaption>Баннер 728×90 · RU</figcaption></figure></div></div>
+ </article><article class="camp" style="--c1:#E6F3EF;--c2:#F0821E;--cink:#0F3D3E">
+  <div class="cinfo">
+   <span class="num">05</span>
+   <h3>Bulaq</h3>
+   <p class="kind">Газированная вода с облепихой</p>
+   <p class="ctext">Минеральная вода с соком облепихи. Свежий мятный фон, пузырьки и горы Алатау.</p>
+   <p class="packpill">Стеклянная бутылка 0,5 л</p>
+   <ul class="fmts"><li>Карточка маркетплейса · RU</li><li>Баннер 300×250 · RU</li><li>Веб-баннер · EN</li></ul>
+  </div>
+  <div class="cgal"><div class="gal"><div class="row" style="max-width:640px"><figure class="b" style="flex:0.7500 1 0"><a class="zoom" href="assets/works/05_bulaq_card-ru.webp" aria-label="Открыть: Карточка маркетплейса · RU"><img src="assets/works/05_bulaq_card-ru.webp" width="900" height="1200" alt="Карточка маркетплейса · RU"></a><figcaption>Карточка маркетплейса · RU</figcaption></figure><figure class="b" style="flex:1.2000 1 0"><a class="zoom" href="assets/works/05_bulaq_square-ru.webp" aria-label="Открыть: Баннер 300×250 · RU"><img src="assets/works/05_bulaq_square-ru.webp" width="1200" height="1000" alt="Баннер 300×250 · RU"></a><figcaption>Баннер 300×250 · RU</figcaption></figure></div><div class="row" style="max-width:611px"><figure class="b" style="flex:1.9100 1 0"><a class="zoom" href="assets/works/05_bulaq_web-en.webp" aria-label="Открыть: Веб-баннер · EN"><img src="assets/works/05_bulaq_web-en.webp" width="1400" height="733" alt="Веб-баннер · EN"></a><figcaption>Веб-баннер · EN</figcaption></figure></div></div></div>
+ </article><article class="camp" style="--c1:#1F2A5C;--c2:#FF6B3D;--cink:#F4EFE4">
+  <div class="cinfo">
+   <span class="num">06</span>
+   <h3>QURT</h3>
+   <p class="kind">Чипсы со вкусом курта</p>
+   <p class="ctext">Запечённые чипсы со вкусом курта. Светлая матовая пачка, белые шарики курта и наклонный жирный шрифт.</p>
+   <p class="packpill">Пакет 90 г</p>
+   <ul class="fmts"><li>Пост Instagram · RU</li><li>Сторис · EN</li><li>Баннер 728×90 · RU</li></ul>
+  </div>
+  <div class="cgal"><div class="gal"><div class="row" style="max-width:516px"><figure class="b" style="flex:1.0000 1 0"><a class="zoom" href="assets/works/06_qurt_post-ru.webp" aria-label="Открыть: Пост Instagram · RU"><img src="assets/works/06_qurt_post-ru.webp" width="1400" height="1400" alt="Пост Instagram · RU"></a><figcaption>Пост Instagram · RU</figcaption></figure><figure class="b" style="flex:0.5621 1 0"><a class="zoom" href="assets/works/06_qurt_stories-en.webp" aria-label="Открыть: Сторис · EN"><img src="assets/works/06_qurt_stories-en.webp" width="787" height="1400" alt="Сторис · EN"></a><figcaption>Сторис · EN</figcaption></figure></div><figure class="b wide"><a class="zoom" href="assets/works/06_qurt_strip-ru.webp" aria-label="Открыть: Баннер 728×90 · RU"><img src="assets/works/06_qurt_strip-ru.webp" width="1400" height="173" alt="Баннер 728×90 · RU"></a><figcaption>Баннер 728×90 · RU</figcaption></figure></div></div>
+ </article></div>
+</div></section>
+
+<footer id="contacts"><div class="wrap">
+ <h2>Контакты</h2>
+ <p>Рассматриваю предложения о работе. Быстрее всего отвечаю в Telegram.</p>
+ <!-- ЗАМЕНИТЕ: контакты -->
+ <div class="contacts"><a class="pri" href="https://t.me/shecks228">Telegram</a><a href="mailto:shecks228@gmail.com">shecks228@gmail.com</a><a href="tel:+77789906478">+7 778 990 64 78</a></div>
+ <p class="copy">© 2026 Увалиханов Асанали</p>
+</div></footer>
+
+<dialog id="lb"><button aria-label="Закрыть" id="lbx">×</button><img id="lbi" alt=""></dialog>
+<script>{
+const d=document.getElementById("lb"),im=document.getElementById("lbi");
+document.querySelectorAll(".zoom").forEach(b=>b.addEventListener("click",e=>{e.preventDefault();im.src=b.getAttribute("href");im.alt=b.getAttribute("aria-label");d.showModal()}));
+document.getElementById("lbx").addEventListener("click",()=>d.close());
+d.addEventListener("click",e=>{if(e.target===d)d.close()});
+}
+{const L=[...document.querySelectorAll('nav .ln a')],S=L.map(a=>document.querySelector(a.getAttribute('href')));
+const spy=()=>{let cur=-1;const y=innerHeight*.35;S.forEach((el,i)=>{if(el&&el.getBoundingClientRect().top<y)cur=i});if(innerHeight+scrollY>=document.documentElement.scrollHeight-4)cur=L.length-1;L.forEach((a,i)=>a.classList.toggle('on',i===cur))};
+addEventListener('scroll',spy,{passive:true});spy();}
+</script>
+</body></html>
